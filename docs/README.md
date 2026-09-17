@@ -6,6 +6,7 @@ Start with the [overview](00-overview.md) for the product's purpose, current dem
 
 | Reader or task | Suggested sequence |
 |---|---|
+| Company seeking a queryable second brain and measured improvement | [Company queries and learning loop](18-company-query-and-learning-loop.md) → [architecture](03-architecture.md) → [data readiness](08-data-readiness-and-delivery.md) |
 | Business sponsor evaluating the idea | [Overview](00-overview.md) → [team experience](02-product-and-teams.md) → [roadmap and economics](07-roadmap-and-economics.md) |
 | Company preparing its information and calls | [Data readiness](08-data-readiness-and-delivery.md) → [tools and APIs](12-tools-apis-and-subscriptions.md) → [storage and lifecycle](14-data-storage-and-lifecycle.md) |
 | Engineer building the first live workflow | [Implementation handoff](10-implementation-handoff.md) → [architecture](03-architecture.md) → [integration contracts](04-integrations.md) → [security](05-security.md) |
@@ -35,6 +36,7 @@ Start with the [overview](00-overview.md) for the product's purpose, current dem
 | [15 · Platform and hybrid options](15-platform-options-and-hybrid-stacks.md) | How can Vercel, Supabase, jobs and automation work with existing clouds? | Architects, platform teams |
 | [16 · Jobs and automation](16-jobs-and-automation-options.md) | When should Trigger.dev, n8n or another runtime handle background work? | Automation and platform engineers |
 | [17 · PostgreSQL and Supabase](17-postgres-and-supabase-options.md) | Which database services fit, and what do permissions, backups and migration require? | Database and application engineers |
+| [18 · Company queries and learning loop](18-company-query-and-learning-loop.md) | How do sales calls or tutoring sessions connect to outcomes, supported patterns, reviewed actions and measured improvement? | Sponsors, domain owners, data and application engineers |
 
 ## Templates to use during delivery
 

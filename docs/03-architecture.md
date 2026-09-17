@@ -49,6 +49,7 @@ flowchart TD
 | Work | Durable queue plus persistent workflow state | Retry, deduplication, timeout, cancellation, checkpoint and dead-letter contracts |
 | Models | Organization-owned model gateway | Generation, embedding, transcription capabilities; no consumer subscription dependencies |
 | Business data | Parameterized report/query adapters | Typed result, definition, period, currency, freshness, source record links |
+| Outcome analysis | Entity-linked observations/outcomes and approved cohort queries | Versioned metric/cohort definitions, authorized joins, reproducible comparisons, uncertainty and evidence lineage |
 | External actions | Allowlisted command adapters | Draft, authorize, preview, approve, execute, verify and compensate where supported |
 | Operations | OpenTelemetry-compatible events and customer monitoring | Exportable logs/metrics/traces, sensitive payloads excluded by default |
 
@@ -130,3 +131,11 @@ Scheduled briefings have an explicit owner and purpose. Generate separately for 
 - Customer-owned operational responsibilities, support access and incident escalation.
 
 These are configuration and delivery decisions. They should not require a fork of the product's domain model.
+
+## 9. Company queries and measured learning
+
+Cross-company pattern questions need an analytical path alongside evidence retrieval. Link recordings and other activities to the correct business entities and dated outcomes, then query a defined eligible population under current permissions. Top-ranked passages alone cannot establish a conversion rate or a learning-outcome comparison.
+
+Implement observations, outcomes, cohort definitions, analysis runs, hypotheses and interventions as versioned, permission-bearing objects. Preserve the chain from evidence to proposed change, actual delivery and later measurement. Publish reviewed lessons with their applicability and uncertainty; a saved suggestion does not automatically become policy or model training data.
+
+The [company query and learning-loop contract](18-company-query-and-learning-loop.md) specifies sales-call and tutoring examples, canonical fields, analytical access and aggregate controls, comparison requirements, storage choices and acceptance gates. These components are proposed production work, not capabilities of the current deterministic demo.

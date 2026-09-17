@@ -4,6 +4,8 @@ This project provides a working demonstration and an implementation blueprint fo
 
 A sales representative could prepare for a customer call using authorized account history. A delivery lead could review commitments from the call alongside project progress. Leadership could review approved business summaries across teams. The existing systems remain authoritative: the accounting platform owns financial records, the CRM owns opportunities, and the project tool owns delivery status.
 
+The production goal also includes a queryable company second brain that connects activity to outcomes. A sales leader could compare recorded sales behavior across won and lost opportunities. A tutoring company could compare lesson observations with measured student progress. That requires reliable links, agreed metrics and analytical queries in addition to connected tools. Findings should lead to reviewed changes whose later results become maintained company knowledge. The [company query and learning-loop guide](18-company-query-and-learning-loop.md) specifies this proposed capability; the current demo does not perform outcome analysis.
+
 ## What you can use today
 
 The repository includes a local application with nine fictional employee personas, thirteen fictional records, evidence search, source previews and team-specific views. Server-side rules demonstrate tenant boundaries, explicit denials, source permissions and the intersection of permissions when several sources contribute to one record. Neither a CEO nor an IT administrator automatically receives access to every record.
