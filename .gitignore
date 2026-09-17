@@ -1,0 +1,17 @@
+.local/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.sqlite*
+*.db
+.DS_Store
+node_modules/
+customer-data/
+private/
+recordings/
+transcripts/
+*.pem
+*.key
+coverage/

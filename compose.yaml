@@ -1,0 +1,15 @@
+services:
+  demo:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - demo-data:/app/.local
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: "no"
+volumes:
+  demo-data:
