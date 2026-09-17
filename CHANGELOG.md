@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.4 — September 17, 2026
+
+Documentation expansion; application behavior unchanged.
+
+- Made the company-wide, permission-aware query and learning-loop goal explicit in the README and overview.
+- Added sales-call conversion and tutoring learning-outcome implementation recipes, including verified entity links, metric definitions, cohort analysis, evidence and uncertainty.
+- Specified scoped joins and aggregates, reproducible analyses, reviewed interventions, later outcome measurement and maintained company knowledge.
+- Distinguished this proposed production analytics layer from the current fictional-data demonstration.
+
 ## 0.1.3 — September 17, 2026
 
 - Named the project AI Company Operating System Template and removed previous product branding from the documentation and demo.

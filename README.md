@@ -4,7 +4,7 @@
 
 A tool-agnostic reference project for turning a personal AI operating-system idea into a company-owned product. Employees get a shared place to understand customers, meetings, files, projects and decisions. Leaders get a broader business view. Each person sees only the evidence they are allowed to access.
 
-**Release: 0.1.3 reference demo + enterprise build specification.** Run a working fictional-data demonstration today. Use the implementation guides to scope and build a real customer deployment. Live connectors, company sign-in, model generation and production infrastructure are future implementation work; the status table below is the contract.
+**Release: 0.1.4 reference demo + enterprise build specification.** Run a working fictional-data demonstration today. Use the implementation guides to scope and build a real customer deployment. Live connectors, company sign-in, model generation, outcome analytics and production infrastructure are future implementation work; the status table below is the contract.
 
 For a plain-language introduction, read [what it does and why it exists](docs/00-overview.md). For the complete documentation, start at [the documentation README](docs/README.md).
 
@@ -13,11 +13,25 @@ For a plain-language introduction, read [what it does and why it exists](docs/00
 - Prepare for a customer conversation using authorized CRM, call and delivery evidence.
 - Turn meetings into reviewed decisions and proposed work, with traceable sources.
 - Keep company context, project history and account knowledge organized and current.
+- Connect recorded activity to measured outcomes, investigate patterns and evaluate reviewed changes to how the company works.
 - Give Sales, Finance, People, Operations, Marketing, Customer Success and leadership appropriate views.
 - Connect existing systems through a common adapter contract, with clear data ownership.
 - Operate under company identity, billing, policies and support ownership rather than depending on one employee's personal assistant account.
 
 This system sits above existing tools. CRM remains authoritative for opportunity records; accounting remains authoritative for financial reports; project tools remain authoritative for delivery status. Company OS provides governed retrieval, maintained knowledge and controlled workflow execution.
+
+## A queryable company and a learning loop
+
+The production goal is a company-owned AI second brain: one place to ask about the connected business, with answers grounded in the records and outcomes each person is authorized to use. It should connect **what happened, what resulted, what might explain it, and what to try next**. Its scope must remain visible; unavailable sources and restricted information cannot be treated as known company facts.
+
+| Example question | What must be connected and implemented |
+|---|---|
+| “What patterns differ between sales calls for deals that close and deals that do not?” | Link recordings and transcripts to CRM opportunities, stage history and defined outcomes; compare eligible opportunity cohorts with cited evidence. |
+| “Which tutoring patterns appear among students who improve versus those who do not yet improve?” | Link sessions to students, learning objectives and comparable baseline/follow-up assessments; account for attendance and relevant differences; return educator-reviewed hypotheses. |
+
+**The loop is: collect evidence → link activities to outcomes → calculate and explain patterns → review a proposed change → deliver it → measure later results → update approved company knowledge.** Saving a suggestion or producing a summary completes only part of that loop.
+
+Connecting tools alone does not implement this capability. It also needs reliable entity links, agreed metric definitions, an analytical query service, validated recording observations, and tracked interventions. The model explains computed results; it must distinguish association from cause and respect permissions on both the evidence and the outcomes. See the [company query and learning-loop guide](docs/18-company-query-and-learning-loop.md) for the two complete use cases, data contracts, access rules and delivery gates. This layer is specified for production and is not implemented in the current demo.
 
 ## Why a company can own and replicate it
 
@@ -40,6 +54,7 @@ A personal coding assistant can help an engineer build this. The proposed deploy
 
 | You want to… | Read / use |
 |---|---|
+| Query the company, compare outcomes and close the learning loop | [Company query and outcome intelligence](docs/18-company-query-and-learning-loop.md) |
 | Identify required tools, APIs, accounts and subscriptions | [Setup requirements](docs/12-tools-apis-and-subscriptions.md) |
 | Start from scratch or reuse AWS/Azure | [Three deployment paths](docs/13-deployment-paths.md) |
 | Choose Vercel, Supabase, Trigger.dev, n8n or a hybrid stack | [Platform options and concrete combinations](docs/15-platform-options-and-hybrid-stacks.md) |
@@ -114,6 +129,7 @@ The evidence preview is deterministic keyword matching, not model-generated anal
 | Permissions | Server-side tenant/grant/deny checks; derived-source intersection; missing/expired/deleted source denial | Real source ACL sync, live checks, group lifecycle, field/row policies, production RLS and enforcement tests |
 | Knowledge | Thirteen fictional records, source lineage, source drawer, authorized search/citations | Parsing, extraction, embeddings/hybrid retrieval, compiled knowledge review and versioning |
 | AI | Deterministic authorized evidence preview | Organization-owned model gateway, model routing, evaluations, budgets and data-processing controls |
+| Outcome intelligence | Sales/tutoring analysis contracts and closed-loop implementation guide | Linked outcome data, validated observations, permission-aware cohort analysis, intervention tracking and later measurement |
 | Connections | Vendor-neutral Python protocol and planned adapter catalog | OAuth/service identities, backfill, incremental sync, revocation and provider contract tests |
 | Customer calls/media | Capture playbook, quality checklist and sample record contract | Actual recording-provider connections, transcription/OCR, storage, consent/policy enforcement and secure playback |
 | Actions | Local task proposal, separate-person approval, source/access recheck, idempotent simulation | Allowlisted provider writes, destination audience checks, durable workers, execution receipts and compensating actions |
