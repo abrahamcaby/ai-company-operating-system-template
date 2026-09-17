@@ -2,10 +2,13 @@
 
 Start with the [overview](00-overview.md) for the product's purpose, current demonstration and remaining implementation work. The [repository README](../README.md) explains how to run the local fictional demo. Architecture and platform guides describe a proposed production service; they do not claim that its connectors or cloud resources are already implemented.
 
+To have your AI assistant interview your company and guide a tailored setup, begin with [SETUP.md](../SETUP.md). It routes through these guides as needed and maintains private answers, connection plans and verified progress.
+
 ## Reading paths
 
 | Reader or task | Suggested sequence |
 |---|---|
+| Company starting with an AI assistant and this repository | [Guided setup](../SETUP.md) → [step-by-step playbook](19-guided-company-setup.md) → [private worksheets](../templates/README.md) |
 | Company seeking a queryable second brain and measured improvement | [Company queries and learning loop](18-company-query-and-learning-loop.md) → [architecture](03-architecture.md) → [data readiness](08-data-readiness-and-delivery.md) |
 | Business sponsor evaluating the idea | [Overview](00-overview.md) → [team experience](02-product-and-teams.md) → [roadmap and economics](07-roadmap-and-economics.md) |
 | Company preparing its information and calls | [Data readiness](08-data-readiness-and-delivery.md) → [tools and APIs](12-tools-apis-and-subscriptions.md) → [storage and lifecycle](14-data-storage-and-lifecycle.md) |
@@ -37,8 +40,12 @@ Start with the [overview](00-overview.md) for the product's purpose, current dem
 | [16 · Jobs and automation](16-jobs-and-automation-options.md) | When should Trigger.dev, n8n or another runtime handle background work? | Automation and platform engineers |
 | [17 · PostgreSQL and Supabase](17-postgres-and-supabase-options.md) | Which database services fit, and what do permissions, backups and migration require? | Database and application engineers |
 | [18 · Company queries and learning loop](18-company-query-and-learning-loop.md) | How do sales calls or tutoring sessions connect to outcomes, supported patterns, reviewed actions and measured improvement? | Sponsors, domain owners, data and application engineers |
+| [19 · Guided company setup](19-guided-company-setup.md) | What should the assistant ask, prepare, connect, implement and verify for this specific company? | Company owner, AI facilitator, IT and implementation team |
+| [20 · Deep company discovery](20-deep-company-discovery.md) | How does a one-question-at-a-time interview uncover clients, processes, tools, exceptions and useful operating context? | Business owners, team leads and AI facilitator |
 
 ## Templates to use during delivery
+
+- [Guided setup worksheets](../templates/README.md): company interview, resumable progress, provider connection cards and pilot acceptance; initialize private copies with `python3 setup_company.py` from the repository root.
 
 - [System inventory](../examples/system-inventory.csv): tools, owners and source responsibilities.
 - [Context intake](../examples/context-intake.md): business questions, audiences and workflow expectations.

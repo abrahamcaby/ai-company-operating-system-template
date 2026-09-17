@@ -2,6 +2,8 @@
 
 Date: September 17, 2026. Scope: version 0.1 fictional local reference implementation.
 
+Later publication and guided-setup checks are recorded below. The current 0.1.5 suite has **42 passing local tests**; this does not verify any production connection or deployment.
+
 ## Executed checks
 
 - **36 automated tests passed** on Python 3.12.14. The same suite also passed on the available system Python 3.9.6; the documented supported starting point is Python 3.11+.
@@ -18,7 +20,7 @@ Date: September 17, 2026. Scope: version 0.1 fictional local reference implement
 
 - **Visual/browser interaction verification:** attempted twice, blocked because the browser tool could not verify its admin-enforced security policy. No alternate browser path was used to bypass that restriction. Responsive behavior, visual layout and complete keyboard/screen-reader operation therefore still need a browser review.
 - **Container execution:** Docker/Compose configuration supplied, but no image build or container run verified in this environment.
-- **GitHub CI:** workflow supplied, but no remote repository was created and no GitHub-hosted run occurred.
+- GitHub publication and CI were subsequently verified; see the publication update below.
 - **Production deployment:** no real identity provider, source system, model provider, cloud resources, recording pipeline, source ACL sync, customer data or external actions were connected or tested.
 - **Enterprise controls:** no penetration test, load test, independent compliance assessment, provider sandbox certification, real disaster-recovery exercise or contractual SLA evidence.
 
@@ -57,4 +59,20 @@ The project is named **AI Company Operating System Template**. The main README n
 - Confirmed all eleven backend and test files are unchanged from 0.1.2. The existing 36-test baseline was not rerun for the documentation and interface-label changes.
 - JavaScript syntax validation passed after the title/preference-key changes. Browser verification remains unavailable because the browser tool could not verify its administrator-enforced policy.
 - Reviewed publication contents for secrets, private paths and customer data; none were found in the 53 intended files. Local databases, caches and development state are excluded.
-- No GitHub-hosted CI run has been verified for this release. The supplied workflow should be checked after publication.
+- At initial authoring, GitHub-hosted CI had not yet been verified; the publication check below supersedes that limitation.
+
+## Publication and outcome-design update 0.1.4
+
+- Published the public template under `abrahamcaby/ai-company-operating-system-template` and enabled GitHub's template replication option.
+- GitHub [Reference checks run 35261981975](https://github.com/abrahamcaby/ai-company-operating-system-template/actions/runs/35261981975) completed successfully on the initial publication commit `0b34d24cb524e15bf60fdfe100fb0783a01c079c`.
+- The later outcome-design commit `b41dc29e7128a60f0a87465175d47e3b2dc3630f` was independently fetched and all 54 files matched the reviewed release manifest byte for byte.
+- The sales/tutoring analytics and learning-loop addition is documentation, not a live analytic service. No company data or sources were connected.
+
+## Guided setup update 0.1.5
+
+- **42 automated tests passed locally on Python 3.12.14**, including the existing policy/workflow/HTTP/readiness suite and six new worksheet-initializer tests. The HTTP checks required authorized localhost access in this environment.
+- Verified blank worksheet creation, preservation of prior answers, rejection of normal public-checkout destinations, no partial writes when a source template is missing, preservation of an existing worksheet symlink target, and an explicit external working directory.
+- Ran the initializer and confirmed it preserves existing planning files while adding missing worksheets. The completed set has six blank files; a repeated run preserves all six. Git confirmed all six `.company/` files are ignored. The directory is also excluded from Docker context.
+- Reviewed guided flows for a tutoring company with missing recordings/engineering ownership and an enterprise sales company with existing cloud and source tools. Both retain explicit blockers, owners and implementation/verification gates.
+- Verified internal documentation file links. Cross-assistant behavior is based on linked official instruction-file documentation and a shared explicit prompt; no end-to-end onboarding session in each third-party assistant has been executed.
+- No live provider setup, company data ingestion, cloud deployment or production acceptance is claimed by these checks. The initializer creates planning files only.

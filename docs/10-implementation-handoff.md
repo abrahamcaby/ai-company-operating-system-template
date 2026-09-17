@@ -10,6 +10,7 @@
 | HTTP | `app/server.py` | Local-only Host checks, same-origin API boundary, fixed static-file allowlist, no-store headers, JSON size/type validation. Demo header is intentionally impersonable. |
 | Connector contract | `app/connectors.py` | Typed record/access/change-page protocol only. There are no implemented provider adapters. |
 | Readiness | `app/readiness.py` | Local shape/declaration checks including recording metadata and permission evidence declarations. It does not verify external facts. |
+| Guided setup | `SETUP.md`, `setup_company.py`, `templates/` | Assistant interview and delivery procedure; initializer creates blank private worksheets and preserves existing files. No source authentication, app configuration or deployment is performed. |
 | Interface | `web/` | Persona changes clear prior evidence; request generations suppress stale UI responses. Text rendered with DOM text nodes. |
 
 The policy's concepts are reusable; the built-in HTTP server and demo identity header are not a production application stack. SQLite events are editable local demo state, not immutable enterprise audit storage. Python protocol definitions do not automatically enforce a provider's permission behavior.
