@@ -1,0 +1,10 @@
+category,system,source_of_truth_for,business_owner,technical_owner,capture_method,identity_mapping,access_model,retention_policy,pilot_scope,status
+Communication,TO_COMPLETE,Approved channels and decisions,TO_COMPLETE,TO_COMPLETE,API or governed export,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+Files,TO_COMPLETE,Policies and project documentation,TO_COMPLETE,TO_COMPLETE,API or governed export,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+Meetings,TO_COMPLETE,Internal meeting evidence,TO_COMPLETE,TO_COMPLETE,Provider transcript or approved notes,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+Customer calls,TO_COMPLETE,Customer call evidence,TO_COMPLETE,TO_COMPLETE,Approved recording and transcript pipeline,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+CRM,TO_COMPLETE,Account contact and opportunity records,TO_COMPLETE,TO_COMPLETE,API or governed export,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+Delivery,TO_COMPLETE,Project status and acceptance records,TO_COMPLETE,TO_COMPLETE,API or governed export,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+Accounting,TO_COMPLETE,Approved financial reports,TO_COMPLETE,TO_COMPLETE,Governed structured query or approved report,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+Media,TO_COMPLETE,Approved assets and rights,TO_COMPLETE,TO_COMPLETE,File metadata and derivatives,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed
+People,TO_COMPLETE,Approved policies and restricted HR records,TO_COMPLETE,TO_COMPLETE,Separately scoped ingestion,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,TO_COMPLETE,Not assessed

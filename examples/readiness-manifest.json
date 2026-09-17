@@ -1,0 +1,44 @@
+{
+  "tenant_id": "meridian-demo",
+  "business_owner": "Fictional Operations Lead",
+  "technical_owner": "Fictional IT Lead",
+  "identity_provider": "Fictional OIDC provider",
+  "retention_policy": "Example only: replace with approved company policy",
+  "connections": [
+    {
+      "id": "meeting-platform",
+      "system": "Customer-selected meeting provider",
+      "owner": "Sales Operations",
+      "source_of_truth_for": "Customer call transcript evidence",
+      "access_model": "source_acl",
+      "capture_method": "recording",
+      "recording_policy_reference": "EXAMPLE-POLICY-NOT-LEGAL-APPROVAL",
+      "identity_mapping_verified": true,
+      "sample_access_test": "passed",
+      "revocation_test": "passed",
+      "revocation_procedure": "Example: tombstone source and invalidate all derivatives; prove inaccessible to the removed user"
+    }
+  ],
+  "sample_records": [
+    {
+      "id": "atlas-call-example",
+      "tenant_id": "meridian-demo",
+      "connection_id": "meeting-platform",
+      "source_id": "recording-demo-001",
+      "source_url": "https://example.com/fictional-call",
+      "owner": "Sales Operations",
+      "version": "1",
+      "updated_at": "2026-09-17T12:00:00Z",
+      "classification": "restricted-customer",
+      "kind": "customer_call",
+      "account_id": "atlas-demo",
+      "meeting_id": "meeting-demo-001",
+      "recording_policy_reference": "EXAMPLE-POLICY-NOT-LEGAL-APPROVAL",
+      "readable_text_reference": "tenant-storage://demo/transcripts/recording-demo-001.json",
+      "transcript_reference": "tenant-storage://demo/transcripts/recording-demo-001.json",
+      "allow_principals": ["group:sales"],
+      "acl_valid_until": "2099-01-01T00:00:00Z",
+      "speaker_and_timestamp_review": "passed"
+    }
+  ]
+}
