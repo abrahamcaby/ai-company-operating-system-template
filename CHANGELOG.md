@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.5 — September 17, 2026
+
+Guided setup materials and a local worksheet initializer; demo application behavior unchanged.
+
+- Added a portable setup prompt, canonical SETUP.md procedure, AGENTS.md router and Claude Code import.
+- Added a reusable company-discovery skill with one-question-at-a-time probing, private answer checkpoints, client segmentation, process maps and a tailored operating readout.
+- Added an adaptive company interview and staged implementation/deployment playbook covering real tools, APIs, recordings, permissions, outcomes, owners, budgets and acceptance evidence.
+- Added private company profile, resumable progress, connection-card and pilot-acceptance worksheets, with Git and Docker exclusions for local working copies.
+- Added a standard-library initializer that preserves existing answers and rejects unignored destinations inside the checkout; it performs no network calls or live configuration.
+- Kept chat guidance, executable local setup, missing engineering and verified production connections explicitly separate.
+
 ## 0.1.4 — September 17, 2026
 
 Documentation expansion; application behavior unchanged.

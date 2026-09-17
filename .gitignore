@@ -1,4 +1,5 @@
 .local/
+.company/
 __pycache__/
 *.py[cod]
 .env

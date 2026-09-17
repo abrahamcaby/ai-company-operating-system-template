@@ -4,9 +4,42 @@
 
 A tool-agnostic reference project for turning a personal AI operating-system idea into a company-owned product. Employees get a shared place to understand customers, meetings, files, projects and decisions. Leaders get a broader business view. Each person sees only the evidence they are allowed to access.
 
-**Release: 0.1.4 reference demo + enterprise build specification.** Run a working fictional-data demonstration today. Use the implementation guides to scope and build a real customer deployment. Live connectors, company sign-in, model generation, outcome analytics and production infrastructure are future implementation work; the status table below is the contract.
+**Release: 0.1.5 guided setup + reference demo + enterprise build specification.** Start an AI-guided company interview, run a working fictional-data demonstration, then use the implementation guides to build a scoped deployment. Live connectors, company sign-in, model generation, outcome analytics and production infrastructure require implementation; the status table below is the contract.
 
 For a plain-language introduction, read [what it does and why it exists](docs/00-overview.md). For the complete documentation, start at [the documentation README](docs/README.md).
+
+## Start here: let your AI assistant guide your company setup
+
+Paste this into your company-approved Claude, ChatGPT, Codex, Cursor or other assistant:
+
+```text
+Help me set up https://github.com/abrahamcaby/ai-company-operating-system-template
+for my company. Read README.md, SETUP.md and docs/19-guided-company-setup.md.
+Use SETUP.md as the setup procedure for this request. Confirm which files
+you can read, then use skills/company-discovery/SKILL.md to grill me about
+our business, clients, current processes and tools, one question at a time.
+Probe vague answers and reuse my previous answers and approved context.
+Create a tailored connection and deployment plan, save progress privately,
+and guide or implement each next authorized step with verification.
+Do not ask me to paste API keys. Distinguish missing engineering from
+working connections. Start with the first discovery question in SETUP.md.
+```
+
+The assistant should first learn **what your company does, which clients it serves, how work actually gets done, and what systems support it**. The [“Grill me about my company” skill](skills/company-discovery/SKILL.md) follows up on vague answers and walks through real processes, handoffs, exceptions, bottlenecks, responsibilities and success measures. It asks one question at a time by default and checkpoints answers privately. The [deep discovery guide](docs/20-deep-company-discovery.md) covers the interview modules.
+
+The output is reusable company context: a business operating brief, client segments, process maps, tool/data ownership and explicit unknowns. Those answers determine the connection plan, permissions, implementation tasks and pilot—not a preset stack. The assistant then investigates recordings, outcomes, administrators, hosting and budget and follows the work through verification and handover. Resume from the private progress record instead of repeating the interview.
+
+**Open [SETUP.md](SETUP.md) for the guided procedure and [the setup playbook](docs/19-guided-company-setup.md) for the full steps.** A pasted link alone does not guarantee an assistant can read the repository or run tools. If it cannot read these files, download or attach the public setup materials. Chat-only assistants can guide and prepare handoffs; coding agents with an opened checkout can implement and test within their authorized access. Included `AGENTS.md` and `CLAUDE.md` route supported coding assistants to the same setup procedure.
+
+For a coding workspace, use **Use this template** to create a company-owned copy, clone/open it, and give the assistant the prompt above. An optional local helper prepares the private worksheets:
+
+```bash
+python3 setup_company.py
+```
+
+This creates blank files in `.company/` and preserves prior answers. It does not connect APIs or deploy an application. Keep that folder in company-approved private storage; it is excluded from Git and Docker context, but that is not encryption or access control. Use [the blank templates](templates/README.md) manually when local Python or filesystem tools are unavailable.
+
+The guide must identify missing production components and help an authorized implementer build them. There is no universal “connect everything” button in this release. The practical milestones are **company discovery → ready data → chosen stack → implemented services → staging connections → verified pilot → operated handoff**.
 
 ## What this helps a company do
 
@@ -54,6 +87,7 @@ A personal coding assistant can help an engineer build this. The proposed deploy
 
 | You want to… | Read / use |
 |---|---|
+| Have an AI interview your company and guide setup step by step | [Start guided setup](SETUP.md) and [setup playbook](docs/19-guided-company-setup.md) |
 | Query the company, compare outcomes and close the learning loop | [Company query and outcome intelligence](docs/18-company-query-and-learning-loop.md) |
 | Identify required tools, APIs, accounts and subscriptions | [Setup requirements](docs/12-tools-apis-and-subscriptions.md) |
 | Start from scratch or reuse AWS/Azure | [Three deployment paths](docs/13-deployment-paths.md) |
@@ -125,6 +159,7 @@ The evidence preview is deterministic keyword matching, not model-generated anal
 
 | Capability | In this repository | Production work |
 |---|---|---|
+| Guided setup | Portable assistant procedure, repository entry points, private worksheets and a local initializer | Company-specific answers, authorized administrators, missing implementation and observed deployment/connection checks |
 | Team experience | Nine fictional personas; overview, knowledge, workflows, connection catalog and access explanation | Company SSO, provisioning, saved preferences and customer configuration |
 | Permissions | Server-side tenant/grant/deny checks; derived-source intersection; missing/expired/deleted source denial | Real source ACL sync, live checks, group lifecycle, field/row policies, production RLS and enforcement tests |
 | Knowledge | Thirteen fictional records, source lineage, source drawer, authorized search/citations | Parsing, extraction, embeddings/hybrid retrieval, compiled knowledge review and versioning |
@@ -197,6 +232,10 @@ web/          Accessible vanilla HTML/CSS/JavaScript frontend, no external depen
 tests/        Policy, workflow, HTTP and readiness checks
 docs/         Product, engineering, readiness, deployment and delivery guides
 examples/     Fictional manifest and customer intake templates
+templates/    Blank private company setup, connection and acceptance worksheets
+skills/       Portable deep company-discovery skill, routed by setup instructions
+SETUP.md      Shared AI-guided discovery and implementation procedure
+setup_company.py  Local worksheet initializer; no network or live configuration
 .github/      CI configuration and connector issue template
 Dockerfile    Optional local demo container
 compose.yaml  Local-only demo service
